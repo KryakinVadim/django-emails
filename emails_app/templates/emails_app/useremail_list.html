@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'email_create' %}">Создать email</a>
+{% if emails %}
+    <ul>
+        {% for email in emails %}
+            <li><a href="{% url 'email_detail' email.pk %}">{{ email.email }}</a> |
+                <a href="{% url 'email_update' email.pk %}">Изменить</a> |
+                <a href="{% url 'email_delete' email.pk %}">Удалить</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Нет данных для отображения</p>
+{% endif %}
+</body>
+</html>

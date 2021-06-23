@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete the item?</p>
+    <input class="btn btn-primary" type="submit" value="Confirm"/>
+    <button onclick="window.history.back();" class="btn btn-default" type="button">Cancel</button>
+</form>
+</body>
+</html>
