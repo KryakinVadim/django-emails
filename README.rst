@@ -7,16 +7,16 @@ CRUD app for collecting email addresses
 Quick start
 -----------
 
-1. Add "emails" to your INSTALLED_APPS setting like this::
+1. Add "emails_app" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
-        'emails',
+        'emails_app',
     ]
 
 2. Include the polls URLconf in your project urls.py like this::
 
-    path('emails/', include('emails.urls')),
+    path('emails/', include('emails_app.urls')),
 
 3. Run ``python manage.py migrate`` to create the emails models.
 
